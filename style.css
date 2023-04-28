@@ -1,0 +1,202 @@
+body {
+    background-color: #E4F2F9;
+    font-family: Arial, sans-serif;
+    color: #2C3E50;
+  }
+  
+  h1 {
+    background-color: #A8D8EA;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  
+  
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  button[type="submit"] {
+    background-color: #42a5f5;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    transition-duration: 0.4s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #1976d2;
+    cursor: pointer;
+  }
+  
+  /* Custom Button Styles */
+
+  button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  /* Option One Button Style */
+  #option-one {
+    background-color: #336699;
+    color: #fff;
+  }
+  
+  /* Option Two Button Style */
+  #option-two {
+    background-color: #6699CC;
+    color: #fff;
+  }
+  
+  /* Option Three Button Style */
+  #option-three {
+    background-color: #99CCFF;
+    color: #2C3E50;
+  }
+  
+  /* Option Four Button Style */
+  #option-four {
+    background-color: #66CCCC;
+    color: #fff;
+  }
+  
+  .logo img {
+    width: 500px;
+    height: 250px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  
+  .logo img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Additional styles for form elements */
+  textarea {
+    height: 150px;
+  }
+  
+  input[type="text"]:focus,
+  textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px #42a5f5;
+  }
+  
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  form p {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  form span {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: bold;
+    }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.logo {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.life-bot {
+  flex: 1 1 auto;
+  text-align: right;
+}
+
+.life-bot h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.life-bot p {
+  font-size: 16px;
+  color: #666;
+}
+
+/*
+.logo {
+    float: left;
+    margin-right: 20px;
+  }
+
+    .title {
+    float: right;
+    text-align: right;
+  }
+
+
+  .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  */
+
+  .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+
+
