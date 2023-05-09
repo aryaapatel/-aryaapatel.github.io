@@ -8,7 +8,8 @@
 
 </head>
 <body>
-    <header class="header">
+	<!--
+<header class="header">
 		<div class="logo">			
 			<img src="eLIFE_logo.png" alt="Elife Bot Logo">
 		</div>
@@ -21,6 +22,8 @@
             <p>Talking about mental health can give us freedom to seek help, find people who can relate, and move toward well-being. Let’s continue the conversation about mental health. Together, we can work to stop the stigma surrounding issues many of us face!</p>
         </div>
 
+	-->
+    
 	</header>
 	<h1>DASS 21 Questionnaire</h1>
 
@@ -35,7 +38,7 @@
           <li>3 Applied to me very much or most of the time</li>
         </ul>
         
-	<form id="dass-form">
+	<form id="dass-form" onsubmit="handleFormSubmit(this)">
 	
 
 		<p>1. I found it hard to wind down:</p>
@@ -172,7 +175,7 @@
 
 		<button type="submit">Submit</button>
 	</form>
-	<script src="/Users/annshuprajapati/Documents/Website_eLIFE/index.js"></script>
+	<script src="./js/dass21.js"></script>
 
 	<script>
 		const form = document.getElementById("dass-form");
@@ -212,7 +215,9 @@ alert(message);
 					case "q16":
 					case "q17":
 					case "q21":
-						depressionScore += parseInt(value);
+						//depressionScore += parseInt(value);
+					    depressionScore += 2 * parseInt(value);
+
 						break;
 					case "q2":
 					case "q4":
@@ -220,7 +225,11 @@ alert(message);
 					case "q9":
 					case "q15":
 					case "q19":
-						anxietyScore += parseInt(value);
+					case "q20":
+
+						//anxietyScore += parseInt(value);
+						anxietyScore += 2 * parseInt(value);
+
 						break;
 					case "q1":
 					case "q6":
@@ -229,8 +238,10 @@ alert(message);
 					case "q12":
 					case "q14":
 					case "q18":
-					case "q20":
-						stressScore += parseInt(value);
+					
+						//stressScore += parseInt(value);
+						stressScore += 2 * parseInt(value);
+
 						break;
 				}
 			});
@@ -251,36 +262,49 @@ alert(message);
 
         let depressionSeverity, anxietySeverity, stressSeverity;
 
-        if (depressionScore >= 21) {
-            depressionSeverity = "Severe";
-        } else if (depressionScore >= 14) {
-            depressionSeverity = "Moderate";
-        } else if (depressionScore >= 10) {
-            depressionSeverity = "Mild";
-        } else {
-            depressionSeverity = "Normal";
-        }
+ 
+		// classify depression severity
+		if (depressionScore >= 28) {
+			depressionSeverity = "Extremely Severe";
+		} else if (depressionScore >= 21) {
+			depressionSeverity = "Severe";
+		} else if (depressionScore >= 14) {
+			depressionSeverity = "Moderate";
+		} else if (depressionScore >= 10) {
+			depressionSeverity = "Mild";
+		} else {
+			depressionSeverity = "Normal";
+		}
 
-        if (anxietyScore >= 15) {
-            anxietySeverity = "Severe";
-        } else if (anxietyScore >= 10) {
-            anxietySeverity = "Moderate";
-        } else if (anxietyScore >= 8) {
-            anxietySeverity = "Mild";
-        } else {
-            anxietySeverity = "Normal";
-        }
 
-        if (stressScore >= 26) {
-            stressSeverity = "Severe";
-        } else if (stressScore >= 19) {
-            stressSeverity = "Moderate";
-        } else if (stressScore >= 15) {
-            stressSeverity = "Mild";
-        } else {
-            stressSeverity = "Normal";
-        }
 
+
+		// classify anxiety severity
+		if (anxietyScore >= 21) {
+			anxietySeverity = "Extremely Severe";
+		} else if (anxietyScore >= 15) {
+			anxietySeverity = "Severe";
+		} else if (anxietyScore >= 10) {
+			anxietySeverity = "Moderate";
+		} else if (anxietyScore >= 8) {
+			anxietySeverity = "Mild";
+		} else {
+			anxietySeverity = "Normal";
+		}
+		// classify anxiety severity
+
+		if (stressScore >= 34) {
+    	stressSeverity = "Extremely Severe";
+		} else if (stressScore >= 26) {
+			stressSeverity = "Severe";
+		} else if (stressScore >= 19) {
+			stressSeverity = "Moderate";
+		} else if (stressScore >= 15) {
+			stressSeverity = "Mild";
+		} else {
+			stressSeverity = "Normal";
+		}
+		
        // const severityMessage = "Depression severity: " + depressionSeverity + "\nAnxiety severity: " + anxietySeverity + "\nStress severity: " + stressSeverity;//
        // alert(severityMessage);//
 
@@ -294,5 +318,3 @@ alert(message);
 	</script>
 </body>
 </html>
-
- 
